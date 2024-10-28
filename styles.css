@@ -7,6 +7,7 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
+    margin: 0;
 }
 
 .container {
@@ -20,10 +21,11 @@ body {
 
 h1 {
     text-align: center;
+    color: #003366;
     margin-bottom: 20px;
 }
 
-h2 {
+h2, h3 {
     color: #003366;
     margin-bottom: 15px;
 }
@@ -32,6 +34,7 @@ label {
     display: block;
     margin: 15px 0 5px;
     font-weight: 600;
+    color: #333;
 }
 
 input[type="text"],
@@ -54,8 +57,9 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%;
     transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -74,4 +78,61 @@ button:hover {
 
 .page.active {
     display: block;
+}
+
+/* Estilos para los registros anteriores */
+#registrosAnteriores {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: none;
+}
+
+#registrosAnteriores.active {
+    display: block;
+}
+
+#registrosAnteriores h2 {
+    color: #003366;
+    margin-top: 0;
+}
+
+#registrosAnteriores p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Estilos para el botón de "Ver Registros Anteriores" */
+#verRegistros {
+    background-color: #28a745;
+    margin-top: 15px;
+}
+
+#verRegistros:hover {
+    background-color: #218838;
+}
+
+/* Ajuste de diseño para familiares */
+.familiar {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+#familiaresContainer label {
+    font-size: 14px;
+    color: #555;
+}
+
+#addFamiliar {
+    background-color: #007bff;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#addFamiliar:hover {
+    background-color: #0069d9;
 }
