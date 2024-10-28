@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Multistep</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Vincular el archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Registro</h1>
+        
+        <!-- Páginas del formulario -->
+        <form id="multiStepForm">
+            <!-- Página 1: Datos Personales -->
+            <div class="page" id="page1">
+                <h2>Datos Personales</h2>
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" required>
+                
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" required>
+                
+                <div class="buttons">
+                    <button type="button" class="next">Siguiente</button>
+                </div>
+            </div>
+            
+            <!-- Página 2: Familiares -->
+            <div class="page" id="page2">
+                <h2>Familiares</h2>
+                <div id="familiaresContainer">
+                    <!-- Se agregarán familiares dinámicamente -->
+                </div>
+                
+                <button type="button" id="addFamiliar">Agregar Familiar</button>
+                
+                <div class="buttons">
+                    <button type="button" class="prev">Anterior</button>
+                    <button type="button" class="next">Siguiente</button>
+                </div>
+            </div>
+            
+            <!-- Página 3: Condiciones Pre-Existentes -->
+            <div class="page" id="page3">
+                <h2>Condiciones Pre-Existentes de Salud</h2>
+                <label for="enfermedad">Enfermedad:</label>
+                <input type="text" id="enfermedad" required>
+                
+                <label for="tiempo">Tiempo con la enfermedad (en años):</label>
+                <input type="number" id="tiempo" min="0" required>
+                
+                <div class="buttons">
+                    <button type="button" class="prev">Anterior</button>
+                    <button type="button" class="next">Siguiente</button>
+                </div>
+            </div>
+            
+            <!-- Página 4: Internamientos Realizados -->
+            <div class="page" id="page4">
+                <h2>Internamientos Realizados</h2>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+                
+                <label for="centro">Centro Médico:</label>
+                <input type="text" id="centro" required>
+                
+                <label for="diagnostico">Diagnóstico:</label>
+                <input type="text" id="diagnostico" required>
+                
+                <div class="buttons">
+                    <button type="button" class="prev">Anterior</button>
+                    <button type="button" class="next">Siguiente</button>
+                </div>
+            </div>
+            
+            <!-- Página 5: Presentar los Datos Registrados -->
+            <div class="page" id="page5">
+                <h2>Resumen de Datos Registrados</h2>
+                <div id="resumen">
+                    <!-- Resumen de los datos ingresados -->
+                </div>
+                
+                <div class="buttons">
+                    <button type="button" class="prev">Anterior</button>
+                    <button type="submit">Grabar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Archivo JS para la lógica -->
+    <script src="scripts.js"></script>
+</body>
+</html>
